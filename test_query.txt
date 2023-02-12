@@ -1,0 +1,6 @@
+python3 assignment_12.py --query 2 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 1 --output ../output/query2_pull.csv
+python3 assignment_12.py --query 1 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 1 --output ../output/query1_pull.csv
+python3 assignment_12.py --query 3 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 1 --output ../output/query3_pull.csv
+python3 assignment_12.py --query 1 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 0 --output ../output/query1_push.csv
+python3 assignment_12.py --query 2 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 0 --output ../output/query2_push.csv
+python3 assignment_12.py --query 3 --ff ../data/friends_grader.txt --mf ../data/movie_ratings_grader.txt --uid 1 --mid 1 --pull 0 --output ../output/query3_push.csv
