@@ -1,6 +1,7 @@
 # This repository contains solutions to the CS599 L1 assignments 
 
 # testcase e.g.
+
 task 3 push based
 python3 skeleton/assignment_12.py --query 3 --ff data/friends.txt --mf data/movie_ratings.txt --uid 193 --mid 1805 --output output/output.txt --pull 1
 
