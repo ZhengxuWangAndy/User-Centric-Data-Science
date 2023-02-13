@@ -11,19 +11,18 @@ class CNN_Data(Dataset):
     '''
         This is a custom dataset that inherits from torch.utils.data.Dataset. 
     '''
-    df=pd.DataFrame()
     def __init__(self, csv_dir):
         '''
         Attributes:
             csv_dir (str): The path to the CSV file that contains the MRI metadata.
         '''
         # YOUR CODE HERE 
-        self.df = pd.read_csv(csv_dir)
+        pass
 
     # Returns total number of data samples
     def __len__(self):
         # YOUR CODE HERE 
-        return len(self.df)
+        pass
 
     # Returns the actual MRI data, the MRI filename, and the label
     def __getitem__(self, idx):
@@ -31,10 +30,8 @@ class CNN_Data(Dataset):
         Attribute:
             idx (int): The sample MRI index.
         '''
-        # YOUR CODE HERE
-        mri = np.load(str('..' + self.df['path'][idx] + self.df['filename'][idx]))
-
-        return mri, self.df['filename'][idx], self.df['AD'][idx]
+        # YOUR CODE HERE 
+        pass
 
 # This is a helper function that performs the following steps:
 #   1. Retrieves the metadata for the 19 MRIs provided 
@@ -50,18 +47,7 @@ def split_csv(csv_file, output_folder='./ADNI3', random_seed = 1051):
         random_seed (int): The seed number to shuffle the csv_file (you can also define your own seed).
     '''
     # YOUR CODE HERE 
-    df_All = pd.read_csv(csv_file)
-    for i in range(len(df_All)):
-        if df_All['filename'][i] not in os.listdir(output_folder):
-            df_All = df_All.drop(labels=i,axis=0)
-
-    df_All = df_All.iloc[np.random.RandomState(seed=random_seed).permutation(len(df_All))]
-
-    df_All[:5].to_csv(output_folder+'/test.csv')
-    df_All[5:].to_csv(output_folder+'/bg.csv')
-
-
-
+    pass
 
 # Returns one list containing the MRI filepaths and a second list with the respective labels
 def read_csv(filename):
@@ -70,16 +56,7 @@ def read_csv(filename):
         filename (str): The path to the CSV file that contains the MRI metadata.
     '''
     # YOUR CODE HERE 
-    df = pd.read_csv(filename)
-    mriFilePath = []
-    labels = []
-    for i in range(len(df)):
-        mriFilePath.append(df['path'][i] + df['filename'][i])
-        labels.append(df['AD'][i])
-
-    return mriFilePath, labels
-
-
+    pass
 
 # Regions inside a segmented brain MRI (ONLY FOR TASK IV)
 brain_regions = {1.:'TL hippocampus R',
