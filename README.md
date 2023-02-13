@@ -1,55 +1,17 @@
 # This repository contains solutions to the CS599 L1 assignments 
 
+# Data folder in google drive: https://drive.google.com/file/d/1gs9btzWg-uVFvJsv5eOqsOwcfhOQeRtJ/view?usp=sharing
+
+
 # testcase e.g.
 
-task 3 push based
-python3 skeleton/assignment_12.py --query 3 --ff data/friends.txt --mf data/movie_ratings.txt --uid 193 --mid 1805 --output output/output.txt --pull 1
 
-task 1 with ray
-python3 skeleton/assignment_12_ray.py --query 1 --ff data/friends.txt --mf data/movie_ratings.txt --uid 344 --mid 1999 --output output/output.txt --pull 1
+# test querys:
+# python3 explain_pipeline.py --task 1 --dataFolder ../data/datasets/ADNI3/ --outputFolder ../output/
 
-## Prerequisites for running queries:
+# python3 explain_pipeline.py --task 2 --dataFolder ../data/datasets/ADNI3/ --outputFolder ../output/
 
-1. Python (3.7+)
-2. [Pytest](https://docs.pytest.org/en/stable/)
-3. [Ray](https://ray.io)
+# python3 explain_pipeline.py --task 3 --dataFolder ../data/datasets/ADNI3/ --outputFolder ../output/
 
-## Input Data
+# python3 explain_pipeline.py --task 4 --dataFolder ../data/datasets/ADNI3/ --outputFolder ../output/
 
-Queries of assignments 1 and 2 expect two space-delimited text files (similar to CSV files). 
-
-The first file (friends) must include records of the form:
-
-|UID1 (int)|UID2 (int)|
-|----|----|
-|1   |2342|
-|231 |3   |
-|... |... |
-
-The second file (ratings) must include records of the form:
-
-|UID (int)|MID (int)|RATING (int)|
-|---|---|------|
-|1  |10 |4     |
-|231|54 |2     |
-|...|...|...   |
-
-## Running queries of Assignment 1
-
-You can run queries as shown below: 
-
-```bash
-$ python assignment_12.py --task [task_number] --friends [path_to_friends_file.txt] --ratings [path_to_ratings_file.txt] --uid [user_id] --mid [movie_id]
-```
-
-For example, the following command runs the 'likeness prediction' query of the first task for user id 10 and movie id 3:
-
-```bash
-$ python assignment_12.py --task 1 --friends friends.txt --ratings ratings.txt --uid 10 --mid 3
-```
-
-The 'recommendation' query of the second task does not require a movie id. If you provide a `--mid` argument, it will be simply ignored.
-
-## Running queries of Assignment 2
-
-TODO
